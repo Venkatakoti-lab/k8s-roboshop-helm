@@ -5,7 +5,7 @@ metadata:
   namespace: roboshop
 spec:
   replicas: {{ .Values.statefulset.replicas }}
-  servicename: mongodb-headless 
+  serviceName: mongodb-headless 
   selector:
     matchlabels:
       project: roboshop
