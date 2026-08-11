@@ -1,0 +1,4 @@
+deployment:
+  replicas: 1
+  image_URL: kori0120/user
+  imageVersion: v1
