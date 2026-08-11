@@ -1,0 +1,4 @@
+deployment:
+  replicas: 1
+  image_URL: koti0120/cart 
+  imageVersion: v1
