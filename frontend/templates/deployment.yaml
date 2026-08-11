@@ -1,0 +1,29 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: frontend 
+  namespace: roboshop
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      project: roboshop
+      component: frontend
+      tier: web 
+  template:
+    metadata:
+      labels:
+        project: roboshop
+        component: frontend
+        tier: web 
+    spec:
+      containers:
+      - name: frontend
+        image: "{{ .Values.deployment.image_URL }}:{{ .Values.deployment.imageVersion }}"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
