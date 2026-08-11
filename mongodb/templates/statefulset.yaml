@@ -7,7 +7,7 @@ spec:
   replicas: {{ .Values.statefulset.replicas }}
   serviceName: mongodb-headless 
   selector:
-    matchlabels:
+    matchLabels:
       project: roboshop
       component: mongodb 
       tier: db 
