@@ -1,4 +1,4 @@
 statefulset:
   image_URL: koti0120/mongodb
   imageVersion: v1
-  replicas: 2
+  replicas: 1
